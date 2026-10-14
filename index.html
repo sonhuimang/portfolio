@@ -154,6 +154,8 @@ select:focus { border-color:var(--accent); }
 .button:hover { transform:translateY(-2px); }
 .button.primary { color:#fff; background:var(--accent); border-color:var(--accent); box-shadow:0 14px 34px rgba(var(--accent-rgb),.3); }
 .button.ghost { background:var(--surface-soft); }
+.button.copy-doi { border-color:rgba(var(--accent-rgb),.45); }
+.button.copy-doi.copied { color:#063; background:rgba(0,229,195,.16); border-color:var(--accent-2); }
 .hero-visual { min-width:0; }
 .orbital { position:relative; width:min(440px,100%); aspect-ratio:1; margin:auto; display:grid; place-items:center; }
 .orbital::before { content:""; position:absolute; inset:15%; border-radius:50%; background:radial-gradient(circle,rgba(var(--accent-rgb),.3),transparent 67%); filter:blur(12px); }
@@ -211,7 +213,7 @@ select:focus { border-color:var(--accent); }
 .capability-grid { display:grid;grid-template-columns:repeat(3,1fr);gap:16px }.capability-card{min-height:320px;padding:25px;border:1px solid var(--line);border-radius:22px;background:var(--surface);transition:.25s}.capability-card:hover{border-color:rgba(var(--accent-rgb),.55);background:linear-gradient(145deg,rgba(var(--accent-rgb),.1),var(--surface))}.cap-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:14px;color:#fff;background:var(--accent);font:800 11px var(--font-display)}.capability-card h3{margin:18px 0 8px;font:700 21px var(--font-display)}.level{display:inline-flex;border:1px solid var(--line);border-radius:999px;padding:3px 8px;font-size:9px;font-weight:700}.level.direct{color:var(--accent-2)}.level.mixed{color:#ffb648}.level.learned{color:var(--muted)}.capability-card ul{margin:20px 0 0;padding:0;list-style:none;display:grid;gap:8px}.capability-card li{padding-bottom:7px;border-bottom:1px solid var(--line);color:var(--muted);font-size:12px}
 
 .experience-layout { display:grid;grid-template-columns:1fr 1fr;gap:20px }.timeline{padding:28px;border:1px solid var(--line);border-radius:24px;background:var(--surface)}.timeline article{display:grid;grid-template-columns:115px 1fr;gap:20px;padding:25px 0;border-bottom:1px solid var(--line)}.timeline article:last-child{border:0}.timeline time{color:var(--accent);font:700 10px var(--font-display)}.timeline h3{margin:8px 0 5px;font:700 18px var(--font-display)}.timeline p{margin:0;color:var(--muted);font-size:12px}
-.outputs-grid { display:grid;grid-template-columns:1.2fr .8fr;gap:18px }.publication-list,.recognition{padding:28px;border:1px solid var(--line);border-radius:24px;background:var(--surface)}.publication-list article{display:grid;grid-template-columns:38px 1fr;gap:16px;padding:22px 0;border-bottom:1px solid var(--line)}.publication-list article:last-child{border:0}.publication-list article>span{color:var(--accent);font:800 12px var(--font-display)}.publication-list h3{margin:0;font:600 14px/1.45 var(--font-display)}.publication-list p{margin:6px 0 0;color:var(--muted);font-size:11px}.thesis-card{padding:22px;border:1px solid rgba(var(--accent-rgb),.35);border-radius:18px;background:rgba(var(--accent-rgb),.08)}.thesis-card small{color:var(--accent);font-size:9px;letter-spacing:.1em}.thesis-card h3{margin:10px 0;font:600 13px/1.55 var(--font-display)}.thesis-card p{margin:0;color:var(--muted);font-size:11px}.award-card{display:grid;grid-template-columns:86px 1fr;gap:14px;padding:17px 0;border-bottom:1px solid var(--line)}.award-card:last-child{border:0}.award-card time{color:var(--accent);font-size:10px;font-weight:700}.award-card strong,.award-card span{display:block}.award-card strong{font-size:12px}.award-card span{margin-top:3px;color:var(--muted);font-size:10px}
+.outputs-grid { display:grid;grid-template-columns:1.2fr .8fr;gap:18px }.publication-list,.recognition{padding:28px;border:1px solid var(--line);border-radius:24px;background:var(--surface)}.publication-list article{display:grid;grid-template-columns:38px 1fr;gap:16px;padding:22px 0;border-bottom:1px solid var(--line)}.publication-list article:last-child{border:0}.publication-list article>span{color:var(--accent);font:800 12px var(--font-display)}.publication-list h3{margin:0;font:600 14px/1.45 var(--font-display)}.publication-list p{margin:6px 0 0;color:var(--muted);font-size:11px}.publication-list article.lead-paper{background:rgba(var(--accent-rgb),.07);border-radius:14px;padding:18px 16px;margin:0 -8px;border-bottom:1px solid rgba(var(--accent-rgb),.3)}.publication-list article.lead-paper>span{color:var(--accent-2)}.first-author-badge{display:inline-block;margin-right:6px;padding:2px 8px;border-radius:999px;color:#001b17;background:var(--accent-2);font-size:9px;font-weight:800;letter-spacing:.04em;vertical-align:middle}.paper-link{color:var(--accent);font-weight:800;text-decoration:none}.paper-link:hover{text-decoration:underline}.thesis-card{padding:22px;border:1px solid rgba(var(--accent-rgb),.35);border-radius:18px;background:rgba(var(--accent-rgb),.08)}.thesis-card small{color:var(--accent);font-size:9px;letter-spacing:.1em}.thesis-card h3{margin:10px 0;font:600 13px/1.55 var(--font-display)}.thesis-card p{margin:0;color:var(--muted);font-size:11px}.award-card{display:grid;grid-template-columns:86px 1fr;gap:14px;padding:17px 0;border-bottom:1px solid var(--line)}.award-card:last-child{border:0}.award-card time{color:var(--accent);font-size:10px;font-weight:700}.award-card strong,.award-card span{display:block}.award-card strong{font-size:12px}.award-card span{margin-top:3px;color:var(--muted);font-size:10px}
 .education-grid { display:grid;grid-template-columns:1fr 1fr;gap:16px }.education-card{display:grid;grid-template-columns:116px 1fr;gap:20px;padding:25px;border:1px solid var(--strong-line);border-radius:22px;background:linear-gradient(135deg,rgba(var(--accent-rgb),.12),var(--surface))}.edu-year{color:var(--accent);font:800 12px var(--font-display)}.education-card small{color:var(--muted);font-size:9px;letter-spacing:.11em}.education-card h3{margin:7px 0 3px;font:700 19px var(--font-display)}.education-card p{margin:0;color:var(--muted);font-size:12px}.training-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}.training-grid article{position:relative;min-height:190px;padding:20px;border:1px solid var(--line);border-radius:18px;background:var(--surface)}.training-grid time{color:var(--muted);font-size:9px}.status{position:absolute;right:16px;top:16px;border-radius:999px;padding:3px 8px;font-size:8px;font-weight:800}.status.done{color:#001b17;background:var(--accent-2)}.status.ongoing{color:#251000;background:#ff9b61}.training-grid h3{margin:27px 0 7px;font:700 15px var(--font-display)}.training-grid p{margin:0;color:var(--muted);font-size:11px}.language-line{display:flex;align-items:center;gap:20px;margin-top:16px;padding:17px 20px;border:1px solid var(--line);border-radius:16px;background:var(--surface)}.language-line>span{color:var(--accent);font-size:9px;font-weight:800;letter-spacing:.12em}.language-line strong{font:700 14px var(--font-display)}.language-line small{margin-left:auto;color:var(--muted)}
 .contact-section { padding-block:130px 80px }.contact-card{position:relative;padding:clamp(32px,6vw,72px);border:1px solid var(--strong-line);border-radius:32px;background:linear-gradient(135deg,rgba(var(--accent-rgb),.22),var(--surface) 50%,rgba(0,229,195,.08));overflow:hidden}.contact-card::after{content:"@";position:absolute;right:3%;bottom:-26%;color:rgba(var(--accent-rgb),.12);font:800 260px/1 var(--font-display);pointer-events:none}.contact-card h2{position:relative;z-index:1}.contact-card>p:not(.section-kicker){position:relative;z-index:1;color:var(--muted)}.contact-actions{position:relative;z-index:2}.contact-email{position:relative;z-index:1;display:block;margin-top:28px;color:var(--accent);font:700 clamp(18px,2.5vw,30px) var(--font-display)}
 .footer{display:flex;justify-content:space-between;gap:20px;padding-block:28px 48px;border-top:1px solid var(--line);color:var(--muted);font-size:11px}.footer div{display:flex;gap:20px}.footer a{color:var(--text)}
@@ -316,6 +318,11 @@ html[data-motion="off"] *,html[data-motion="off"] *::before,html[data-motion="of
         </div>
         <div class="hero-actions">
           <a class="button primary" href="#research">대표 연구 보기 <span>↘</span></a>
+          <button type="button" class="button ghost copy-doi" id="copyPaperBtn"
+                  data-doi="https://link.springer.com/article/10.1007/s10068-026-02289-4"
+                  aria-label="제1저자 논문 링크 복사">
+            <span class="copy-doi-label">📄 공동 1저자 논문 링크 복사</span>
+          </button>
           <a class="button ghost" href="mailto:1huny@naver.com">1huny@naver.com</a>
         </div>
       </div>
@@ -550,15 +557,16 @@ html[data-motion="off"] *,html[data-motion="off"] *::before,html[data-motion="of
       </div>
       <div class="outputs-grid">
         <div class="publication-list reveal">
-          <p class="mini-label">SCIE PUBLICATIONS · CO-AUTHOR 4</p>
-          <article><span>01</span><div><h3>Solasodine inhibited the proliferation of gastric cancer cells through suppression of Hedgehog/Gli1 signaling</h3><p>Food Science and Biotechnology · 2025 · 공동저자 6/7</p></div></article>
-          <article><span>02</span><div><h3>The optimized combination of extracts from Sajabal mugwort and green tea synergistically enhanced antioxidant activity in vitro and in vivo</h3><p>Food Science and Biotechnology · 2025 · 공동저자 6/11</p></div></article>
-          <article><span>03</span><div><h3>β,β-Dimethylacryloyl Alkannin from Arnebia euchroma Roots Suppresses Triple Negative Breast Cancer Growth via AKT/Gli1 Signaling</h3><p>Journal of Agricultural and Food Chemistry · 2025 · 공동저자 5/11</p></div></article>
-          <article><span>04</span><div><h3>Garcinone C suppressed the proliferation of gastric cancer cells through regulating Hedgehog signaling</h3><p>Journal of Food Biochemistry · 2025 · 공동저자 5/8</p></div></article>
+          <p class="mini-label">SCIE PUBLICATIONS · 5편 (공동 제1저자 1편 포함)</p>
+          <article class="lead-paper"><span>01</span><div><h3>Garcinia mangostana pericarp extract and α-mangostin equally contained in the extract ameliorate thrombogenesis in vitro and in vivo <a class="paper-link" href="https://link.springer.com/article/10.1007/s10068-026-02289-4" target="_blank" rel="noopener">↗</a></h3><p><span class="first-author-badge">공동 제1저자</span> Food Science and Biotechnology · 2026</p></div></article>
+          <article><span>02</span><div><h3>Solasodine inhibited the proliferation of gastric cancer cells through suppression of Hedgehog/Gli1 signaling</h3><p>Food Science and Biotechnology · 2025 · 공동저자 6/7</p></div></article>
+          <article><span>03</span><div><h3>The optimized combination of extracts from Sajabal mugwort and green tea synergistically enhanced antioxidant activity in vitro and in vivo</h3><p>Food Science and Biotechnology · 2025 · 공동저자 6/11</p></div></article>
+          <article><span>04</span><div><h3>β,β-Dimethylacryloyl Alkannin from Arnebia euchroma Roots Suppresses Triple Negative Breast Cancer Growth via AKT/Gli1 Signaling</h3><p>Journal of Agricultural and Food Chemistry · 2025 · 공동저자 5/11</p></div></article>
+          <article><span>05</span><div><h3>Garcinone C suppressed the proliferation of gastric cancer cells through regulating Hedgehog signaling</h3><p>Journal of Food Biochemistry · 2025 · 공동저자 5/8</p></div></article>
         </div>
         <div class="recognition reveal">
           <p class="mini-label">THESIS &amp; AWARDS</p>
-          <article class="thesis-card"><small>MASTER'S THESIS · 2026</small><h3>The effect of Garcinia mangostana L. pericarp extracts and α-Mangostin on improvement of blood flow via regulating NF-κB signaling and eNOS phosphorylation</h3><p>중앙대학교 일반대학원 식품생명공학과</p></article>
+          <article class="thesis-card"><small>MASTER'S THESIS · 2026 · SCIE 논문 출판</small><h3>The effect of Garcinia mangostana L. pericarp extracts and α-Mangostin on improvement of blood flow via regulating NF-κB signaling and eNOS phosphorylation</h3><p>중앙대학교 일반대학원 식품생명공학과 · <a class="paper-link" href="https://link.springer.com/article/10.1007/s10068-026-02289-4" target="_blank" rel="noopener">Food Science and Biotechnology (2026) 게재 ↗</a></p></article>
           <article class="award-card"><time>2025.04.25</time><div><strong>우수논문(포스터) 발표상</strong><span>한국산업식품공학회</span></div></article>
           <article class="award-card"><time>2023.08.25</time><div><strong>대학생 농산업 아이디어 경진대회 대상</strong><span>농촌진흥청</span></div></article>
           <article class="award-card"><time>2021.06.19</time><div><strong>스마트 농식품 아이디어 창업캠프 최우수상</strong><span>LINC+</span></div></article>
@@ -760,6 +768,23 @@ document.getElementById("copyEmail")?.addEventListener("click", async (event) =>
   }
 });
 document.getElementById("printButton")?.addEventListener("click", () => window.print());
+
+document.getElementById("copyPaperBtn")?.addEventListener("click", async (event) => {
+  const btn = event.currentTarget;
+  const url = btn.dataset.doi;
+  const label = btn.querySelector(".copy-doi-label");
+  const original = label ? label.textContent : "";
+  try { await navigator.clipboard.writeText(url); }
+  catch {
+    const input = document.createElement("textarea"); input.value = url; document.body.appendChild(input); input.select(); document.execCommand("copy"); input.remove();
+  }
+  showToast("논문 링크를 복사했습니다.");
+  if (label) {
+    label.textContent = "✅ 복사됨!";
+    btn.classList.add("copied");
+    setTimeout(() => { label.textContent = original; btn.classList.remove("copied"); }, 1800);
+  }
+});
 
 window.addEventListener("beforeprint", () => revealItems.forEach((item) => item.classList.add("visible")));
   </script>
